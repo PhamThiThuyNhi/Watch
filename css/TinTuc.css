@@ -1,0 +1,134 @@
+div.container {
+    height: 2000px;
+    position: relative;
+    top: 120px;
+}
+
+div.tieude {
+    margin-bottom: 50px;
+    width: 100%;
+    height: 150px;
+    text-align: center;
+}
+
+h1 i b {
+    color: red;
+}
+
+div.new {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    top: 30px;
+}
+
+div.new1 {
+    width: 100%;
+    height: 300px;
+}
+
+div.new1 .text {
+    width: 60%;
+    float: left;
+    text-align: justify;
+    padding-right: 50px;
+    height: 300px;
+    border: 1px solid grey;
+    border-radius: 30px 10px 10px 30px;
+    padding: 20px;
+    font-size: 25px;
+}
+
+div.new h1 {
+    color: red;
+    text-align: center;
+}
+
+div.new1 .hinh {
+    width: 40%;
+    float: right;
+    height: 300px;
+}
+
+div.new1 .hinh img {
+    width: 80%;
+    float: right;
+    height: 300px;
+
+}
+
+div.new2 {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    height: 300px;
+}
+
+div.new2 .hinh {
+    width: 40%;
+    float: left;
+    height: 300px;
+}
+
+div.new2 .hinh img {
+    width: 80%;
+    float: left;
+    height: 300px;
+}
+
+div.new2 .text {
+    width: 60%;
+    float: right;
+    height: 300px;
+    text-align: justify;
+    border: 1px solid grey;
+    border-radius: 10px 30px 30px 10px;
+    padding: 20px;
+    font-size: 25px;
+}
+
+div.new3 {
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    top: 50px;
+}
+
+div.hinhanh {
+    width: 100%;
+    position: relative;
+    top: 50px;
+    height: 520px;
+
+}
+
+div.hinhanh #ha31 {
+    width: 30%;
+    float: left;
+    height: 520px;
+    padding: 20px;
+}
+
+div.hinhanh #ha33{
+    width: 40%;
+    float: left;
+    height: 520px;
+    padding: 20px;
+}
+div.hinhanh #ha32 {
+    width: 30%;
+    float: right;
+    height: 520px;
+    padding: 20px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    transition: all .3s ease;
+}
+
+ img:hover {
+    filter: none;
+    transform: rotate(5deg) scale(1.1);
+}

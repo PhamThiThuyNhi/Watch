@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán</title>
+    <link rel="shortcut icon" href="../img/nghieplogo.png">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="../bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/Home.css">
+    <link rel="stylesheet" href="../css/Thanhtoan.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.css">
+    <script src="../js/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+
+        function kiemtramatkhau() {
+            let pass = document.getElementById('pass1').value;
+            //Mật khẩu : Vui lòng bao gồm ít nhất 1 ký tự viết hoa, 1 ký tự viết thường và 1 số
+            let patten = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+            if (patten.test(pass)) {
+                document.getElementById('erpass').innerHTML = "*";
+                return true;
+            }
+            else {
+                document.getElementById('erpass').innerHTML = "Mật khẩu chưa đúng định dạng !!!"
+                return false;
+            }
+        }
+
+        function confirmPass() {
+            let passcheck = document.getElementById('pass2').value;
+            let pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+            if (pattern.test(passcheck)) {
+                document.getElementById('erpasscheck').innerHTML = "*";
+                return true;
+            }
+            else {
+                document.getElementById('erpasscheck').innerHTML = "Mật khẩu không trùng khớp !!!";
+                return false;
+            }
+        }
+
+
+        function ktraSDT() {
+            let sdt = document.getElementById('phone').value;
+            pattern = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
+            if (pattern.test(sdt)) {
+                document.getElementById('erSDT').innerHTML = "*";
+                return true;
+            }
+            else {
+                document.getElementById('erSDT').innerHTML = "Số điện thoại không hợp lệ  !!!";
+                return false;
+            }
+        }
+
+        /*
+        Email: 
+             - Phải chứa ký tự '@'và '.'
+             - Phải có ít nhất một ký tự trước và sau '@'
+             - Phải có ít nhất hai ký tự sau '.'(dấu chấm)
+             VD: ten@gmail.com
+        */
+        function ktraEmail() {
+            var x = document.getElementById('email').value;
+            var atposition = x.indexOf("@");
+            var dotposition = x.lastIndexOf(".");
+
+            if (atposition < 1 || dotposition < (atposition + 2) || (dotposition + 2) >= x.length) {
+                document.getElementById('erEmail').innerHTML = "Email không hợp lệ !!!";
+                return false;
+            }
+            else {
+                document.getElementById('erEmail').innerHTML = "*";
+                return true;
+            }
+        }
+
+    
+        function ktraten() {
+            let ten = $("#txtten").val(value);
+            let pattern = /^([A-Z]{1}[a-z]*\s)+([A-Z]{1}[a-z]*)$/
+            if (pattern.test(ten)) {
+                $("#erten").html("*");
+                return true;
+            }
+            else {
+                $("#erten").html("Nhap lai!");
+                return false;
+            }
+        }
+        $("#txtten").blur(function (e) {
+            ktraten();
+        });
+        function DatHang() {
+            // lấy đầu vào từ người dùng từ các trường biểu mẫu
+            let ten = document.getElementById('txtten').value;
+            let dc = document.getElementById('address').value;
+            let sdt = document.getElementById('phone').value;
+            let x = document.getElementById('email').value;
+
+            // kiểm tra các trường đầu vào
+            if (ktraSDT() && ktraEmail()) {
+                // nếu các trường đầu vào hợp lệ, thêm dữ liệu vào các trường trong modal
+                $("#mymodal .modal-body #modalbody .row:nth-child(1) .col-sm-8").text(ten);  // thêm dữ liệu vào trường "Họ tên"
+                $("#mymodal .modal-body #modalbody .row:nth-child(2) .col-sm-8").text(dc);  // thêm dữ liệu vào trường "Địa chỉ"
+                $("#mymodal .modal-body #modalbody .row:nth-child(3) .col-sm-8").text(sdt);  // thêm dữ liệu vào trường "Số điện thoại"
+                $("#mymodal .modal-body #modalbody .row:nth-child(4) .col-sm-8").text(x);  // thêm dữ liệu vào trường "Email"
+
+                // mở modal
+                $("#mymodal").modal("show");
+            }
+        }
+        $("#btnDatHang").click(function () {
+            // gọi hàm DatHang() để thêm dữ liệu vào modal
+            DatHang();
+
+            // hiển thị modal
+            $("#mymodal").modal("show");
+        });
+
+    </script>
+
+</head>
+
+<body onload="loadCart()">
+    <div class="outer">
+        <header id="nav">
+            <div class="logo">
+                <a href="../html/Index.html"><img src="../img/logo-re.png" alt="" id="logo2"></a>
+            </div>
+            <div class="menu">
+
+                <ul>
+                    <li>
+                        <a href="../html/Index.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="../html/DongHo.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Đồng hồ</a>
+                    </li>
+                    <li>
+                        <a href="../html/GioiThieu.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Giới thiệu </a>
+                    </li>
+                    <li>
+                        <a href="../html/Lienhe.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Liên hệ </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="timkiem">
+                <input placeholder="Search" type="text" oninput="searchProducts(this.value)" />
+                <span class="uil uil-search"> <i class="fa fa-search"></i></span>
+            </div>
+
+
+            <div id="searchResults" class="popup">
+                <ul class="results-list" id="resultsList"></ul>
+                <button id="showMoreButton" onclick="showMoreResults()">Xem thêm</button>
+            </div>
+            <div class="giohang">
+                <a href="#"><i class="fa fa-cart-plus"></i></a> <br>
+                <a href="../html/ThanhToan.html">Giỏ hàng</a>
+            </div>
+            <div class="login">
+                <i class="fa fa-user-circle"></i><br>
+                <a href="../html/DangNhap.html">Đăng nhập| </a>
+                <a href="../html/DangKy.html">Đăng ký</a>
+                <br>
+            </div>
+
+        </header>
+        <nav>
+            <div class="navbar">
+
+                <div class="offcanvas offcanvas-left" id="demo">
+                    <div class="offcanvas-header">
+                        <h3 class="offcanvas-title">MENU</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="list-group">
+                            <a href="../html/Index.html" class="list-group-item list-group-item-action">Trang chủ</a>
+                            <a href="../html/DongHo.html" class="list-group-item list-group-item-action">Đồng hồ</a>
+
+                            <a href="../html/GioiThieu.html" class="list-group-item list-group-item-action">Giới
+                                thiệu</a>
+                            <a href="../html/Lienhe.html" class="list-group-item list-group-item-action">Liên hệ</a>
+                            <a href="../html/TinTuc.html" class="list-group-item list-group-item-action">Tin Tức</a>
+                            <a href="../html/Sitemap.html" class="list-group-item list-group-item-action">Sitemap</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-fluid mt-3">
+                    <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                        <i class='fas fa-th'></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main>
+
+            <section class="than">
+                <div class="right">
+                    <div class="color"></div>
+                    <div class="color"></div>
+                    <div class="color"></div>
+                    <ul>
+                        <li><a href="#"><i class='fab fa-facebook'></i></a></li>
+                        <li><a href="#"><i class='fab fa-viber'></i></a></li>
+                        <li><a href="#"><i class='fab fa-facebook-messenger'></i></a></li>
+                        <li><a href="#"><i class='fab fa-instagram'></i></a></li>
+                    </ul>
+                </div>
+            </section>
+            <div class="container">
+                <div class="trai">
+                    <h2>THÔNG TIN CÁ NHÂN</h2>
+                    <br>
+                    <form action="#">
+                        <!-- Họ tên -->
+                        <div class="form-group">
+                            <label for="name">Họ và tên:</label>
+                            <input type="text" class="form-control" id="txtten" name="name"
+                                placeholder="Nhập vào họ tên (bắt buộc nhập)">
+                            <div id='erten' style="color: red;">*</div>
+                        </div>
+
+                        <!-- Địa chỉ -->
+                        <div class="form-group">
+                            <label for="address">Địa chỉ:</label>
+                            <input type="text" class="form-control" id="address" name="address"
+                                placeholder="Nhập vào địa chỉ">
+                        </div>
+                        <!-- Điện thoại -->
+                        <div class="form-group">
+                            <label for="phone">Điện thoại:</label>
+                            <input type="text" class="form-control" id="phone" name="phone"
+                                placeholder="Nhập vào số điện thoại (9-10 số)" onblur="ktraSDT()">
+                            <div id='erSDT' style="color: red;">(*)</div>
+                        </div>
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="Nhập vào email theo dạng ten@gmail.com" onblur="ktraEmail()">
+                            <div id='erEmail' style="color: red;">(*)</div>
+                        </div>
+                        <div class="remember-forgot">
+                            <button type="button" name="btnDatHang" class="btn btn-primary" style="color: #fff;"
+                                data-bs-toggle="modal" data-bs-target="#mymodal" onclick="DatHang()" id="btnDatHang">Đặt
+                                hàng</button>
+                            <button type="button" class="btn btn-primary" style="color: #fff;">Hủy</button>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="phai">
+                    <h2>THANH TOÁN HÓA ĐƠN</h2>
+                    <p>Vui lòng kiểm tra thông tin trước khi thanh toán</p>
+                    <form action="">
+                        <table class="table " id="tb">
+                            <thead>
+                                <tr>
+                                    <th id="th1">Hình ảnh</th>
+                                    <th id="th2">Tên sản phẩm</th>
+                                    <th>Số lượng</th>
+                                    <th>Giá</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart">
+                            </tbody>
+                        </table>
+                        <div style="text-align: right;" class="price-total">
+                            <p style="font-weight: bold;" class="text-danger">
+                                <br>Tổng tiền: <span id="total"></span><sup></sup>
+                            </p>
+                        </div>
+
+                        <div class="product-details">
+                            <!-- <img id="product-image" src="" alt="Product Image"> -->
+                            <h1 id="product-name"></h1>
+                            <p id="product-brand"></p>
+                            <p id="product-type"></p>
+                            <p id="product-segment"></p>
+                            <p id="product-price"></p>
+                            <p id="product-describe"></p>
+                        </div>
+                    </form>
+                </div>
+
+                <script src="../js/product.js"></script>
+                <script src="../js/productDetail.js"></script>
+                <script src="../js/pay.js"></script>
+                <script>
+                    loadCart();
+                </script>
+
+
+            </div>
+
+
+
+
+            <div class="modal" id="mymodal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2> <b>Thông tin đơn hàng</b></h2>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" id="modalbody">
+                                <div class="row">
+                                    <label class="col-sm-4 col-form-label" for="">Họ tên: </label>
+                                    <div class="col-sm-8">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label class="col-sm-4 col-form-label" for="">Địa chỉ: </label>
+                                    <div class="col-sm-8">
+
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <label class="col-sm-4 col-form-label" for="">Số điện thoại: </label>
+                                    <div class="col-sm-8">
+
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <label class="col-sm-4 col-form-label" for="">Email</label>
+                                    <div class="col-sm-8">
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <table class="table " id="cart1">
+                                        <thead>
+                                            <tr class="tb2">
+                                                <th id="th1">Hình ảnh</th>
+                                                <th id="th2">Tên sản phẩm</th>
+                                                <th>Số lượng</th>
+                                                <th>Giá</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="cart">
+                                        </tbody>
+                                    </table>
+                                    <!-- <div style="text-align: right;" class="price-total1">
+                                        <p style="font-weight: bold;" class="text-danger">
+                                            <br>Tổng tiền: <span id="total1"></span><sup></sup>
+                                        </p>
+                                    </div> -->
+
+                                </div>
+                                <script src="../js/product.js"></script>
+                                <script src="../js/productDetail.js"></script>
+                                <script src="../js/DonHang.js "></script>
+                                </table>
+                        </div>
+
+                        </form>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </main>
+    <footer>
+        <div class="logo">
+            <img src="../img/nghieplogo.png" alt="" srcset="" width="80%">
+
+        </div>
+        <div class="TC"><a href="Index.html"><b>TRANG CHỦ</b></a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <b>Phương thức thanh toán:</b><br>
+            <span>
+                <img src="../img/vietinbank-removebg-preview.png" alt="">
+                <img src="../img/agribank-removebg-preview.png" alt="">
+
+                <img src="../img/MBBank-removebg-preview.png" alt="">
+                <img src="../img/BIDN-removebg-preview.png" srcset="">
+                <img src="../img/vietcombank-removebg-preview.png" alt="">
+            </span>
+        </div>
+        <div class="DH"><b><a href="../html/DongHo.html">ĐỒNG HỒ</a></b><br>
+            <a href="../html/DongHo.html"> Đồng hồ thông minh</a><br>
+            <a href="../html/DongHo.html">Đồng hồ cơ</a> <br>
+            <a href="../html/DongHo.html">Đồng hồ điện tử</a>
+        </div>
+        <div class="GT"><a href="../html/GioiThieu.html"><b>GIỚI THIỆU</b></a><br>
+            <a href="#">Giới thiệu NGHIEP WATCH</a>
+            <br><a href="#">Giới thiệu thành viên</a>
+        </div>
+        <div class="LH"><a href="../html/Lienhe.html"><b>LIÊN HỆ</b></a>
+            <p>Hotline tư vấn:
+                0343906003</p>
+            <p>Email: nghiepwatch.com</p>
+            <p>
+                Địa chỉ: 12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, TPHCM.
+            </p>
+            <ul class="nav">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

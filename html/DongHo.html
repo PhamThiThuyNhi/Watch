@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách sản phẩm</title>
+    <link rel="shortcut icon" href="../img/nghieplogo.png">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/product.css">
+
+</head>
+
+<body>
+    <div class="outer">
+        <header id="nav">
+            <div class="logo">
+                <a href="../html/Index.html"><img src="../img/logo-re.png" alt="" id="logo2"></a>
+            </div>
+            <div class="menu">
+
+                <ul>
+                    <li>
+                        <a href="../html/Index.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="../html/DongHo.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Đồng hồ</a>
+                    </li>
+                    <li>
+                        <a href="../html/GioiThieu.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Giới thiệu </a>
+                    </li>
+                    <li>
+                        <a href="../html/Lienhe.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Liên hệ </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="timkiem">
+                <input placeholder="Search" type="text" oninput="searchProducts(this.value)" />
+                <span class="uil uil-search"> <i class="fa fa-search"></i></span>
+              </div>
+              
+              <div id="searchResults" class="popup">
+                <ul class="results-list" id="resultsList"></ul>
+                <button id="showMoreButton" onclick="showMoreResults()" style="border-radius: 10px; border: none; font-size: 15px;">Xem thêm</button>
+              </div>
+              
+            <div class="giohang">
+                <a href="#"><i class="fa fa-cart-plus"></i></a> <br>
+                <a href="../html/ThanhToan.html">Giỏ hàng</a>
+            </div>
+            <div class="login">
+                <i class="fa fa-user-circle"></i><br>
+                <a href="../html/DangNhap.html">Đăng nhập| </a>
+                <a href="../html/DangKy.html">Đăng ký</a>
+                <br>
+            </div>
+
+        </header>
+        <nav>
+            <div class="navbar">
+
+                <div class="offcanvas offcanvas-left" id="demo">
+                    <div class="offcanvas-header">
+                        <h3 class="offcanvas-title">MENU</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="list-group">
+                            <a href="../html/Index.html" class="list-group-item list-group-item-action">Trang chủ</a>
+                            <a href="../html/DongHo.html" class="list-group-item list-group-item-action">Đồng hồ</a>
+
+                            <a href="../html/GioiThieu.html" class="list-group-item list-group-item-action">Giới
+                                thiệu</a>
+                            <a href="../html/Lienhe.html" class="list-group-item list-group-item-action">Liên hệ</a>
+                            <a href="../html/TinTuc.html" class="list-group-item list-group-item-action">Tin Tức</a>
+                            <a href="../html/Sitemap.html" class="list-group-item list-group-item-action">Sitemap</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-fluid mt-3">
+                    <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                        <i class='fas fa-th'></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <section class="than">
+                <div class="right">
+                    <div class="color"></div>
+                    <div class="color"></div>
+                    <div class="color"></div>
+                    <ul>
+                        <li><a href="https://www.facebook.com/nhi.phamthithuy.144/"><i class='fab fa-facebook'></i></a>
+                        </li>
+                        <li><a href="#"><i class='fab fa-viber'></i></a></li>
+                        <li><a href="#"><i class='fab fa-facebook-messenger'></i></a></li>
+                        <li><a href="#"><i class='fab fa-instagram'></i></a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="container">
+                <P style="margin-left: 30px;"> <i>Lọc sản phẩm: </i></P>
+                <form action="" class="filter">
+                    <div class="item">
+                        <label for="">Thương Hiệu</label>
+                        <select name="thuonghieu" id="brand">
+                            <option value="allitem">Tất cả </option>
+                            <option value="rolex">Rolex</option>
+                            <option value="hublot">Hublot</option>
+                            <option value="samsung">SamSung</option>
+                            <option value="apple">AppleWatch</option>
+                            <option value="amazfit">Amazfit</option>
+                            <option value="xiaomi">Xiaomi</option>
+                            <option value="Casio">Casio</option>
+
+                        </select>
+                    </div>
+                    <div class="item">
+                        <label for="">Loại</label>
+                        <select name="type" id="type">
+                            <option value="all">Tất cả </option>
+                            <option value="dhco">Đồng hồ cơ</option>
+                            <option value="dhthongminh">Đồng hồ thông minh</option>
+                            <option value="dhdientu">Đồng hồ điện tử </option>
+
+
+                        </select>
+
+                    </div>
+                    <div class="item">
+                        <label for="">Phân khúc</label>
+                        <select name="segment" id="segment">
+                            <option value="all">Tất cả </option>
+                            <option value="giare">Giá rẻ</option>
+                            <option value="tamtrung">Tầm Trung</option>
+                            <option value="caocap">Cao Cấp </option>
+
+
+                        </select>
+
+                    </div>
+
+
+                </form>
+                <div class="countResults" style="padding-left: 30px;">
+                    Kết quả lọc có: <b id="count">5</b>.
+                </div>
+                <div id="list">
+
+
+
+                </div>
+
+            </div>
+
+  
+
+        </main>
+        <footer>
+            <div class="logo">
+                <img src="../img/nghieplogo.png" alt="" srcset="" width="80%">
+
+            </div>
+            <div class="TC"><a href="Index.html"><b>TRANG CHỦ</b></a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <b>Phương thức thanh toán:</b><br>
+                <span>
+                    <img src="../img/vietinbank-removebg-preview.png" alt="">
+                    <img src="../img/agribank-removebg-preview.png" alt="">
+
+                    <img src="../img/MBBank-removebg-preview.png" alt="">
+                    <img src="../img/BIDN-removebg-preview.png" srcset="">
+                    <img src="../img/vietcombank-removebg-preview.png" alt="">
+                </span>
+            </div>
+            <div class="DH"><b><a href="../html/DongHo.html">ĐỒNG HỒ</a></b><br>
+                <a href="../html/DongHo.html"> Đồng hồ thông minh</a><br>
+                <a href="../html/DongHo.html">Đồng hồ cơ</a>  <br>
+                  <a href="../html/DongHo.html">Đồng hồ điện tử</a>
+            </div>
+            <div class="GT"><a href="../html/GioiThieu.html"><b>GIỚI THIỆU</b></a><br>
+                <a href="#">Giới thiệu NGHIEP WATCH</a>
+                <br><a href="#">Giới thiệu thành viên</a>
+            </div>
+            <div class="LH"><a href="../html/Lienhe.html"><b>LIÊN HỆ</b></a>
+                <p>Hotline tư vấn:
+                    0343906003</p>
+                <p>Email: nghiepwatch.com</p>
+                <p>
+                    Địa chỉ: 12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, TPHCM.
+                </p>
+                <ul class="nav">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/product.js"></script>
+</body>
+
+</html>

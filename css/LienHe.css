@@ -1,0 +1,732 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+body {
+    background: url("../img/backgroundLH.png");
+    background-repeat: no-repeat;
+    background-size: 1480px;
+}
+
+main {
+    position: relative;
+    top: 120px;
+    font-size: 16px;
+}
+
+div.thanhvien h1 {
+    text-align: center;
+    z-index: 1;
+}
+
+.thanhvien div.left {
+    width: 50%;
+    float: left;
+    height: 700px;
+}
+
+
+
+div.tv1 {
+    width: 600px;
+    position: relative;
+    left: 100px;
+}
+
+div.tv2 {
+    width: 600px;
+    position: relative;
+    left: 50px;
+}
+
+div.tv3 {
+    width: 600px;
+    position: relative;
+    left: 0px;
+}
+
+.thanhvien div.right {
+    width: 49%;
+    float: right;
+    /* border: 1px solid rgb(0, 0, 0);  */
+    position: relative;
+    top: 100px;
+    /* overflow: hidden; */
+}
+
+.thanhvien div.right div.tv4 {
+    width: 600px;
+    /* border: 1px solid red; */
+    position: relative;
+    left: 70px;
+    /* overflow: hidden; */
+}
+
+.thanhvien div.right div.tv5 {
+    width: 600px;
+    /* border: 1px solid red; */
+    position: relative;
+    left: -30px;
+    /* overflow: hidden; */
+}
+
+
+table img {
+    width: 55%;
+    border-radius: 10%;
+    position: relative;
+    /* left: 0px;
+    height: 40px; */
+}
+
+#td1 {
+    width: 30px;
+    overflow: hidden;
+}
+
+#td1 img {
+    object-fit: cover;
+    transition: transform 0.8s;
+    height: 100%;
+    cursor: pointer;
+}
+
+#td1:hover img {
+    transform: scale(1.2);
+}
+
+/* table img:hover {
+
+    /* border-bottom: 2px solid orange; */
+/* animation: progress 5s linear;
+animation-fill-mode: forwards;
+transform: scale(1.15);
+} */
+
+.tv1,
+.tv2,
+.tv3,
+.tv4,
+.tv5 {
+    margin: 20px;
+}
+
+#td1 {
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+
+#td2 {
+    width: 69%;
+    float: right;
+    position: relative;
+    top: 90px;
+    font-weight: 500;
+}
+
+div.lienhe {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    /* top: 300px; */
+    float: left;
+    left: 50px;
+}
+
+div.lienhe b {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+/* PHẦN HEADER  */
+header {
+    width: 100%;
+    clear: both;
+    height: 80px;
+    font-weight: bold;
+    position: fixed;
+    z-index: 100000;
+    background-color: #181717;
+    background-color: transparent;
+    color: #000000;
+
+}
+
+header div.logo {
+    width: 25%;
+    height: 80px;
+    float: left;
+}
+
+header div.logo img {
+    bottom: 1px;
+    left: 30px;
+
+}
+
+header div.menu {
+    width: 35%;
+    height: 80px;
+    float: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+header div.timkiem {
+    width: 15%;
+    position: relative;
+    top: 25px;
+    height: 35px;
+    float: left;
+}
+
+header div.giohang {
+    width: 5%;
+    position: relative;
+    top: 20px;
+    float: left;
+}
+
+header div.login {
+    width: 15%;
+    height: 80px;
+
+    float: right;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+li a {
+    text-decoration: none;
+}
+
+#nav {
+    background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+
+header div.logo #logo1 {
+    width: 30%;
+    position: relative;
+    top: 5px;
+}
+
+header div.logo #logo2 {
+    width: 50%;
+    position: relative;
+    top: 5px;
+}
+
+header div.menu ul {
+    position: relative;
+    top: 10px;
+    margin-left: 15px;
+}
+
+header div.menu ul li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 15px;
+}
+
+header div.menu ul li a {
+    text-decoration: none;
+    transition: transform 0.5s;
+}
+
+header div.menu ul li:hover {
+
+    /* border-bottom: 2px solid orange; */
+    animation: progress 5s linear;
+    animation-fill-mode: forwards;
+    transform: scale(1.1);
+}
+
+header div.timkiem {
+    display: inline-flex;
+    padding: 3px;
+    border-radius: 50px;
+    transition: 0.4s;
+    position: relative;
+}
+
+header div.timkiem:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid #000000;
+}
+
+header div.timkiem input {
+    background: transparent;
+    border: 0;
+    max-width: 0;
+    padding: 0;
+    text-indent: 12px;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: "Poppins";
+    outline: none;
+    transition: 0.4s;
+}
+
+header div.timkiem input::placeholder {
+    color: rgba(255, 255, 255, 0.375);
+}
+
+header div.timkiem:hover input {
+    max-width: 180px;
+}
+
+header div.timkiem span {
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    background: #ffffff;
+    color: #000000;
+    border-radius: inherit;
+    font-size: 15px;
+    pointer-events: none;
+}
+
+header div.giohang {
+    position: relative;
+
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+    left: 10px;
+}
+
+header div.giohang i {
+    position: relative;
+    font-size: 20px;
+
+    padding: 0px;
+}
+
+div.login {
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+    top: 20px;
+
+}
+
+header div.login i {
+    position: relative;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+
+
+ul li {
+    list-style-type: none;
+
+}
+
+header a {
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: orange;
+}
+
+ion-icon {
+    color: #f9f9f9;
+}
+
+/* HIỆU ỨNG CHO menu */
+
+
+
+
+header div.menu a {
+    position: relative;
+    display: inline-block;
+    padding: 2px 3px;
+    margin: 4px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: .5s;
+    overflow: hidden;
+
+}
+
+header div.menu a:hover {
+    background: #ffffff;
+    color: #050801;
+    box-shadow: 0 0 5px #ffffff,
+        0 0 25px #ffffff,
+        0 0 50px #ffffff,
+        0 0 200px #ffffff;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+}
+
+header div.menu a:nth-child(1) {
+    filter: hue-rotate(270deg);
+}
+
+header div.menu a:nth-child(2) {
+    filter: hue-rotate(110deg);
+}
+
+header div.menu a span {
+    position: relative;
+    display: block;
+}
+
+header div.menu a span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #0005);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: 100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+header div.menu a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ffffff);
+    animation: animate2 1s linear infinite;
+    animation-delay: .20s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+header div.menu a span:nth-child(3) {
+    bottom: -100%;
+    right: 0;
+    width: 2%;
+    height: 100%;
+    background: linear-gradient(270deg, transparent, #ffffff);
+    animation: animate3 1s linear infinite;
+    animation-delay: .50s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+header div.menu a span:nth-child(3) {
+    bottom: -100%;
+    left: 0;
+    width: 2%;
+    height: 100%;
+    background: linear-gradient(270deg, transparent, #ffffff);
+    animation: animate3 1s linear infinite;
+    animation-delay: .75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+
+
+
+
+
+/* PHẦN NAV  */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 100px;
+    z-index: 2;
+    height: auto;
+  
+  
+  }
+  
+  nav div.navbar {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    float: left;
+  }
+  
+  
+  div.navbar #demo {
+    width: 150px;
+    height: 360px;
+    bottom: 230px;
+    border-radius: 0 30px 30px 0;
+  }
+  
+
+div.offcanvas-body a:hover {
+    color: orange;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4;
+
+}
+
+section.than {
+    text-align: center;
+}
+
+section.than p {
+    font-size: 30px;
+}
+
+section.than h1 {
+    font-size: 120px;
+}
+
+
+main section.than div.right {
+    position: absolute;
+    right: 15px;
+    top: 130px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    position: fixed;
+
+}
+
+section.than b .right::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+section.than .right .color {
+    position: absolute;
+    filter: blur(150px);
+}
+
+section.than .right ul {
+    position: relative;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    float: bottom right;
+    right: 25px;
+    top: 250px;
+}
+
+section.than .right ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px;
+    display: flex;
+
+}
+
+section.than .right ul li a {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #ffffff;
+    border-radius: 10px;
+    text-decoration: none;
+    backdrop-filter: blur(2px);
+    transition: 0.5s;
+    white-space: nowrap;
+}
+
+section.than .right ul li a:hover {
+    transform: translateY(-20px);
+}
+
+section.than .right ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: skewX(45deg) translateX(150px);
+    transition: 0.5s;
+}
+
+section.than .right a:hover::before {
+    transform: skewX(45deg) translateX(-150px);
+}
+
+/* PHẦN FOOTER  */
+footer a {
+    text-decoration: none;
+    color: #000000;
+}
+
+footer li a {
+    text-decoration: none;
+    color: #000000;
+
+}
+
+footer {
+    width: 100%;
+    clear: both;
+    color: #000000;
+    background-color: #eeeeee;
+    height: 250px;
+    border-radius: 10px;
+    background: #eeeeee;
+    box-shadow: 20px 20px 60px #bebebe,
+        -20px -20px 60px #ffffff;
+    position: relative;
+    top: 50px;
+}
+
+footer div {
+    font-weight: 300;
+    padding: 20px;
+}
+
+
+footer div.logo {
+    position: relative;
+    top: 20px;
+    height: 230px;
+    width: 20%;
+    float: left;
+}
+
+footer div.TC {
+    width: 20%;
+    float: left;
+}
+
+footer div.DH {
+    width: 20%;
+    float: left;
+}
+
+footer div.GT {
+    width: 20%;
+    float: left;
+}
+
+footer div.LH {
+    width: 20%;
+    float: right;
+}
+
+footer ul.nav li {
+    display: inline-block;
+
+}
+
+footer b {
+    font-weight: bold;
+}
+
+footer b {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+footer div.TC img {
+    width: 30%;
+}
+
+footer a:hover {
+    color: orange;
+}
+.results-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .results-list li {
+    display: flex;
+  
+    padding: 10px;
+    font-size: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .results-list li img {
+    width: 50px;
+    margin-right: 20px;
+    height: auto;
+  }
+  
+  .popup {
+    position: absolute;
+    top: 100%;
+    left: 900px;
+    width: 350px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 999;
+    display: none;
+  }
+  
+  .timkiem {
+    position: relative;
+  }

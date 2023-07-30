@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu</title>
+    <link rel="shortcut icon" href="../img/nghieplogo.png">
+    <link rel="stylesheet" href="../css/Home.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css/introduce.css">
+
+</head>
+
+<body>
+    <div class="outer">
+        <header id="nav">
+            <div class="logo">
+                <a href="../html/Index.html"><img src="../img/logo-re.png" alt="" id="logo2"></a>
+            </div>
+            <div class="menu">
+
+                <ul>
+                    <li>
+                        <a href="../html/Index.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="../html/DongHo.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Đồng hồ</a>
+                    </li>
+                    <li>
+                        <a href="../html/GioiThieu.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Giới thiệu </a>
+                    </li>
+                    <li>
+                        <a href="../html/Lienhe.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Liên hệ </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="timkiem">
+                <input placeholder="Search" type="text" oninput="searchProducts(this.value)" />
+                <span class="uil uil-search"> <i class="fa fa-search"></i></span>
+            </div>
+
+            <div id="searchResults" class="popup">
+                <ul class="results-list" id="resultsList"></ul>
+                <button id="showMoreButton" onclick="showMoreResults()">Xem thêm</button>
+            </div>
+            <div class="giohang">
+                <a href="#"><i class="fa fa-cart-plus"></i></a> <br>
+                <a href="../html/ThanhToan.html">Giỏ hàng</a>
+            </div>
+            <div class="login">
+                <i class="fa fa-user-circle"></i><br>
+                <a href="../html/DangNhap.html">Đăng nhập| </a>
+                <a href="../html/DangKy.html">Đăng ký</a>
+                <br>
+            </div>
+
+        </header>
+        <nav>
+            <div class="navbar">
+
+                <div class="offcanvas offcanvas-left" id="demo">
+                    <div class="offcanvas-header">
+                        <h3 class="offcanvas-title">MENU</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="list-group">
+                            <a href="../html/Index.html" class="list-group-item list-group-item-action">Trang chủ</a>
+                            <a href="../html/DongHo.html" class="list-group-item list-group-item-action">Đồng hồ</a>
+
+                            <a href="../html/GioiThieu.html" class="list-group-item list-group-item-action">Giới
+                                thiệu</a>
+                            <a href="../html/Lienhe.html" class="list-group-item list-group-item-action">Liên hệ</a>
+                            <a href="../html/TinTuc.html" class="list-group-item list-group-item-action">Tin Tức</a>
+                            <a href="../html/Sitemap.html" class="list-group-item list-group-item-action">Sitemap</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-fluid mt-3">
+                    <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                        <i class='fas fa-th'></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main>
+
+            <section class="than">
+                <div class="right">
+                    <div class="color"></div>
+                    <div class="color"></div>
+                    <div class="color"></div>
+                    <ul>
+                        <li><a href="#"><i class='fab fa-facebook'></i></a></li>
+                        <li><a href="#"><i class='fab fa-viber'></i></a></li>
+                        <li><a href="#"><i class='fab fa-facebook-messenger'></i></a></li>
+                        <li><a href="#"><i class='fab fa-instagram'></i></a></li>
+                    </ul>
+                </div>
+
+            </section>
+            <div class="container">
+                <div class="intro">
+                    <div class="phan1">
+                        <div class="gioithieu">
+                            <h1 style="font-size: 70px; padding: 70px 10px 10px 50px; color: aliceblue;">
+                                Giới thiệu
+                            </h1>
+                            <hr width="100%" color="yellow" size="2px">
+                        </div>
+                        <img src="../img/hinh4.png">
+
+                    </div>
+                    <div class="phan2">
+                        <div class="hinh">
+                            <img src="../img/hinh5.png">
+                        </div>
+
+                        <div class="text">
+                            <br>
+                            <p style="font-size : 30px"> About the web</p>
+                            <br>
+                            <hr color="rgb(1, 161, 176)" padding="10px">
+                            <br>
+                            <p style="font-size: 20px;">
+                                <b style="color : rgb(1, 161, 176);padding-left: 25px">Kim chỉ nam</b>: <i
+                                    style="color : yellow; font-size: 20px">
+                                    NGHIỆP watch store</i> sẽ là cầu nối, có thể thay bạn xin ý kiến để có thể
+                                kết nối, tạo những mối quan hệ với nhiều người đẳng cấp. Đừng ngại ngần bất cứ điều
+                                gì hãy dành ra một khoảng thời gian quý báu để có thể cùng nhau uống một cốc café
+                                vào
+                                một buổi chiều cuối tuần đẹp trời. Sẽ đến lúc, ban thấy rằng mình đã không đầu tư vô
+                                ích cho một mối quan hệ cần thiết, bạn thấy rằng mình lựa chọn Nghiệp watch store để
+                                kết
+                                nối quan hệ không phải là sự lựa chọn sai lầm.
+                                <br>
+                                <b style="color : rgb(1, 161, 176); padding-left: 25px">Tầm nhìn</b> : bằng khát
+                                vọng
+                                tiền phong cùng sự
+                                tâm huyết chiến lược đầu tư - phát triển bản vững, <i
+                                    style="color : yellow; font-size: 20px">
+                                    NGHIỆP watch store</i> - Khẳng Định Đẳng Cấp Thương Lưu! Phấn đấu trở thành tập
+                                đoàn kinh doanh hàng đầu đem những sản phẩm từ các thương hiệu nổi tiếng trên thế
+                                giới
+                                dễ dàng tới tay khách hàng tại Việt Nam
+                                <br>
+                                <b style="color : rgb(1, 161, 176); padding-left: 25px">Sứ mệnh</b> : <i
+                                    style="color : yellow; font-size: 30spx">
+                                    NGHIỆP watch store</i> - Khẳng Định Đảng Cấp Thương Lưu đem lại sự Tự Tin, Quyến
+                                Rũ
+                                cho khách hàng bằng những sản phẩm thời thượng có thương hiệu đẳng cấp nhất thế giới
+                                "
+                                <br>
+                                <b style="color : rgb(1, 161, 176); padding-left: 25px">Nhiệm vụ</b> : tạo ra xu thế
+                                dùng đổ hiệu và thay
+                                đổi suy nghĩ, quan điểm từng nguồn trong giới thượng lưu về tầm quan trọng và sự ảnh
+                                hưởng
+                                của những món đồ hiệu tới sự thành công của họ.
+                            </p>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="phan3">
+                        <div class="hinh">
+                            <div class="nav1">
+                                <img src="../img/hinh2.avif">
+                            </div>
+                            <div class="nav2">
+                                <img src="../img/hinh1.avif">
+                            </div>
+                            <h2 style="font-size: 30px; color: aliceblue;">
+                                <p style="padding-left: 25px;">Giá trị cốt lõi </p>
+                                <hr> TÍN - TÂM - TẦM
+                            </h2><br>
+                            <br>
+                        </div>
+
+
+                        <div class="giaTri">
+                            <p>
+                                - Luôn lấy chữ <b>TÍN</b> làm kim chỉ nam cho mọi hoạt động, mọi sản phẩm và dịch
+                                vụ.
+                                <br><br>
+                                - Luôn cố gắng, nỗ lực hết mình đề đàm bào chất lượng sản phẩm tốt nhất, dịch
+                                vụ tận tâm nhất và cao hơn là các cam kết của mình với khách hàng, đối tác.
+                                <br><br>
+                                <b style="font-size: 30px; padding-left: 80px"><i> TÍN</i></b>
+                            </p>
+                            <p>
+                                - Luôn đặt chữ <b>TÂM </b> là một trong những nền tảng quan trọng của việc kinh
+                                doanh. Chúng tôi coi trọng khách hàng và luôn lấy khách hàng làm trung tâm,
+                                đặt lợi ích và mong muốn của khách hàng lên hàng đầu.
+                                <br>
+                                <br><br><br>
+                                <b style="font-size: 30px; padding-left: 80px"><i>
+                                        TÂM</i></b>
+                            </p>
+                            <p>
+                                - Luôn cung cấp các sản phẩm và dịch vụ cao cấp và tinh tế thể hiện bản lĩnh và vị
+                                thế của khách hàng
+                                <br>
+                                - Luôn mang tự căn dặn bản thân đang mang một tầm vóc đẳng cấp của một
+                                thương hiệu đề tự tin đem đến khách hàng những trải nghiệm xứng <b><br>TẦM</b>
+                                <br>
+                                <b style="font-size: 30px; padding-left: 80px"><i>TẦM</i></b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="thanhvien">
+                    <h1>Thành viên thực hiện
+                    </h1>
+                    <table>
+                        <thead>
+                            <th>STT</th>
+                            <th></th>
+                            <th>MSSV</th>
+                            <th>Họ tên</th>
+                            <th>Nhiệm vụ</th>
+                        </thead>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                    </table>
+                </div> -->
+            </div>
+            <!--ok-->
+            <br>
+            <br>
+            <br>
+
+        </main>
+        <footer>
+            <div class="logo">
+                <img src="../img/nghieplogo.png" alt="" srcset="" width="80%">
+
+            </div>
+            <div class="TC"><a href="Index.html"><b>TRANG CHỦ</b></a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <b>Phương thức thanh toán:</b><br>
+                <span>
+                    <img src="../img/vietinbank-removebg-preview.png" alt="">
+                    <img src="../img/agribank-removebg-preview.png" alt="">
+
+                    <img src="../img/MBBank-removebg-preview.png" alt="">
+                    <img src="../img/BIDN-removebg-preview.png" srcset="">
+                    <img src="../img/vietcombank-removebg-preview.png" alt="">
+                </span>
+            </div>
+            <div class="DH"><b><a href="../html/DongHo.html">ĐỒNG HỒ</a></b><br>
+                <a href="../html/DongHo.html"> Đồng hồ thông minh</a><br>
+                <a href="../html/DongHo.html">Đồng hồ cơ</a> <br>
+                <a href="../html/DongHo.html">Đồng hồ điện tử</a>
+            </div>
+            <div class="GT"><a href="../html/GioiThieu.html"><b>GIỚI THIỆU</b></a><br>
+                <a href="#">Giới thiệu NGHIEP WATCH</a>
+                <br><a href="#">Giới thiệu thành viên</a>
+            </div>
+            <div class="LH"><a href="../html/Lienhe.html"><b>LIÊN HỆ</b></a>
+                <p>Hotline tư vấn:
+                    0343906003</p>
+                <p>Email: nghiepwatch.com</p>
+                <p>
+                    Địa chỉ: 12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, TPHCM.
+                </p>
+                <ul class="nav">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

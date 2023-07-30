@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="shortcut icon" href="../img/nghieplogo.png">
+    <link rel="stylesheet" href="../css/Home.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="outer">
+        <header id="nav">
+            <div class="logo">
+                <a href="../html/Index.html"><img src="../img/nghiep.png" alt="" id="logo2"></a>
+            </div>
+            <div class="menu">
+
+                <ul>
+                    <li>
+                        <a href="../html/Index.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="../html/DongHo.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Đồng hồ</a>
+                    </li>
+                    <li>
+                        <a href="../html/GioiThieu.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Giới thiệu </a>
+                    </li>
+                    <li>
+                        <a href="../html/Lienhe.html">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Liên hệ </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="timkiem">
+                <input placeholder="Search" type="text" oninput="searchProducts(this.value)" />
+                <span class="uil uil-search"> <i class="fa fa-search"></i></span>
+            </div>
+
+
+            <div id="searchResults" class="popup">
+                <ul class="results-list" id="resultsList"></ul>
+                <button id="showMoreButton" onclick="showMoreResults()">Xem thêm</button>
+            </div>
+      
+            <div class="giohang">
+                <a href="#"><i class="fa fa-cart-plus"></i></a> <br>
+                <a href="../html/ThanhToan.html">Giỏ hàng</a>
+            </div>
+            <div class="login">
+                <i class="fa fa-user-circle"></i><br>
+                <a href="../html/DangNhap.html">Đăng nhập| </a>
+                <a href="../html/DangKy.html">Đăng ký</a>
+                <br>
+            </div>
+
+        </header>
+        <nav>
+            <div class="navbar">
+
+                <div class="offcanvas offcanvas-left" id="demo">
+                    <div class="offcanvas-header">
+                        <h3 class="offcanvas-title">MENU</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="list-group">
+                            <a href="../html/Index.html" class="list-group-item list-group-item-action">Trang chủ</a>
+                            <a href="../html/DongHo.html" class="list-group-item list-group-item-action">Đồng hồ</a>
+
+                            <a href="../html/GioiThieu.html" class="list-group-item list-group-item-action">Giới
+                                thiệu</a>
+                            <a href="../html/Lienhe.html" class="list-group-item list-group-item-action">Liên hệ</a>
+                            <a href="../html/TinTuc.html" class="list-group-item list-group-item-action">Tin Tức</a>
+                            <a href="../html/Sitemap.html" class="list-group-item list-group-item-action">Sitemap</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container-fluid mt-3">
+                    <button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                        <i class='fas fa-th'></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <main>
+
+            <section class="than">
+                <div class="right">
+                    <div class="color"></div>
+                    <div class="color"></div>
+                    <div class="color"></div>
+                    <ul>
+                        <li><a href="#"><i class='fab fa-facebook'></i></a></li>
+                        <li><a href="#"><i class='fab fa-viber'></i></a></li>
+                        <li><a href="#"><i class='fab fa-facebook-messenger'></i></a></li>
+                        <li><a href="#"><i class='fab fa-instagram'></i></a></li>
+                    </ul>
+                </div>
+                <div class="vd">
+                    <video playsinline autoplay muted loop id="video" width="100%">
+
+                        <source src="../img/videoTC.mp4">
+
+
+                    </video>
+                    <hgroup class="title-block css-18gvr0c css-yyjl48 e64je20">
+                        <p>Nghiep watchmaking know-how </p> <br>
+                        <h2>WELCOME TO NGHIEP WATCH</h2>
+
+                    </hgroup>
+
+                    <div>
+
+                        <h1 class="title">
+                            NGHIEP WATCH
+                            <span class="bi bi-watch"></span>
+                        </h1>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <p>
+                            The challenge of excellence
+                        </p>
+                        <h1>New watches 2023</h1>
+                    </div>
+                </div>
+            </section>
+            <br>
+            <br>
+            <br>
+            <div class="lable">
+                GIỚI THIỆU CÁC DÒNG ĐỒNG HỒ ĐẸP CÓ THỂ BẠN CHƯA BIẾT?
+            </div><br> <br>
+
+            <div class="quangcao">
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img width="30%" src="../img/dongho1.jpg!w700wp" alt="Los Angeles" class="d-block"
+                                style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img width="30%" src="../img/dongho4.jpg" alt="Chicago" class="d-block" style="width:100%">
+                        </div>
+                        <div class="carousel-item">
+                            <img width="30%" src="../img/dongho3.jpg!w700wp" alt="New York" class="d-block"
+                                style="width:100%">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <article class="sp1">
+                <div class="gt">
+                    <img class="gt" src="../img/QC3.avif" alt="" width="100%">
+                </div>
+                <div class="chitiet">
+                    <p>
+                        "Thời gian của bạn là hữu hạn, đừng phí hoài nó bằng cách sống cuộc đời của một người khác"
+                        <br>
+                        <br>
+                        <b>NGHIEP WATCH </b>
+                        sẽ mang đến cho ban những trải nghiệm tuyệt vời. Với các sản phẩm sang trọng, đẹp mắt, tinh tế
+                        và phong cách lịch lãm.
+                        <br><br><br><br><br><br>
+                        <br><br><br>
+                    </p>
+                    </p>
+                </div>
+            </article>
+            <br>
+            <br>
+
+            <a href="../html/DongHo.html"><img src="../img/dongho5.jpg" alt=""></a>
+
+            <a href="../html/DongHo.html"><img src="../img/QC1.avif" alt="" width="100%"></a>
+            <a href="../html/DongHo.html"><img src="../img/QC2.avif" alt="" width="100%"></a>
+            <a href="../html/DongHo.html"><img src="../img/QC4.jpg" alt="" width="100%"></a>
+
+        </main>
+        <footer>
+            <div class="logo">
+                <img src="../img/nghieplogo.png" alt="" srcset="" width="80%">
+
+            </div>
+            <div class="TC"><a href="Index.html"><b>TRANG CHỦ</b></a>
+                <br>
+                <br>
+                <br>
+                <br>
+                <b>Phương thức thanh toán:</b><br>
+                <span>
+                    <img src="../img/vietinbank-removebg-preview.png" alt="">
+                    <img src="../img/agribank-removebg-preview.png" alt="">
+
+                    <img src="../img/MBBank-removebg-preview.png" alt="">
+                    <img src="../img/BIDN-removebg-preview.png" srcset="">
+                    <img src="../img/vietcombank-removebg-preview.png" alt="">
+                </span>
+            </div>
+            <div class="DH"><b><a href="../html/DongHo.html">ĐỒNG HỒ</a></b><br>
+                <a href="../html/DongHo.html"> Đồng hồ thông minh</a><br>
+                <a href="../html/DongHo.html">Đồng hồ cơ</a> <br>
+                <a href="../html/DongHo.html">Đồng hồ điện tử</a>
+            </div>
+            <div class="GT"><a href="../html/GioiThieu.html"><b>GIỚI THIỆU</b></a><br>
+                <a href="#">Giới thiệu NGHIEP WATCH</a>
+                <br><a href="#">Giới thiệu thành viên</a>
+            </div>
+            <div class="LH"><a href="../html/Lienhe.html"><b>LIÊN HỆ</b></a>
+                <p>Hotline tư vấn:
+                    0343906003</p>
+                <p>Email: nghiepwatch.com</p>
+                <p>
+                    Địa chỉ: 12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, TPHCM.
+                </p>
+                <ul class="nav">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/product.js"></script>
+</body>
+
+</html>

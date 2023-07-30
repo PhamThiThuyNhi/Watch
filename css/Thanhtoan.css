@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #b0cccf;
+}
+
+main {
+    width: 100%;
+    position: relative;
+    background-color: #b0cccf;
+}
+
+div.container {
+    width: 100%;
+    height: 700px;
+    /* padding: 20px; */
+    position: relative;
+    top: 100px;
+
+
+}
+
+div.trai {
+    width: 45%;
+    float: left;
+}
+
+div.phai {
+    width: 55%;
+    float: right;
+}
+
+form {
+    width: 450px;
+    float: left;
+}
+
+h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+div.trai h2 {
+    position: relative;
+    right: 50px;
+    font-weight: bold;
+}
+
+div.phai h2,
+p,
+th {
+    text-align: center;
+    font-weight: bold;
+}
+
+div.trai .btn {
+    width: 40%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin: 20px;
+    position: relative;
+    left: 5px;
+}
+
+div.trai .btn:hover {
+    background: #03e9f4;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4;
+
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+
+div.phai #tb {
+    width: 700px;
+}
+
+div.phai #tb #th1 {
+    width: 100px;
+}
+
+div.phai #tb #th2 {
+    width: 200px;
+}
+
+.price-total {
+    position: relative;
+    left: 400px;
+}
+
+
+#mymodal{
+    position: absolute;
+    top: 120px;
+}
+.price-total1 {
+    position: relative;
+    left: 40px;
+}
